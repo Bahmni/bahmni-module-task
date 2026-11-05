@@ -16,8 +16,7 @@ import org.bahmni.module.task.api.service.TaskService;
 import org.openmrs.Concept;
 import org.openmrs.Order;
 import org.springframework.stereotype.Service;
-
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service("taskExtService")
 @Transactional
