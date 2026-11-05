@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    This Source Code Form is subject to the terms of the Mozilla Public License,
+    v. 2.0. If a copy of the MPL was not distributed with this file, You can
+    obtain one at http://mozilla.org/MPL/2.0/. OpenMRS is also distributed under
+    the terms of the Healthcare Disclaimer located at http://openmrs.org/license.
+
+    Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
+    graphic logo is a trademark of OpenMRS Inc.
+
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <!-- FHIR2 Task layer (IomTaskDao/IomTaskService/translators) is annotation-registered. -->
+    <context:component-scan base-package="org.bahmni.module.task.api" />
+    <context:component-scan base-package="org.bahmni.module.task.fhir2" />
+
+    <!-- Internal-only bean: not meant to be consumed outside this module, use taskService instead. -->
+<!--    <bean id="fhirTaskDao" class="org.bahmni.module.task.api.dao.impl.TaskDaoImpl">-->
+<!--        <constructor-arg name="sessionFactory" ref="sessionFactory"/>-->
+<!--    </bean>-->
+
+    <!-- Public exported bean: the contract other modules should depend on. -->
+<!--    <bean id="taskService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">-->
+<!--        <property name="transactionManager">-->
+<!--            <ref bean="transactionManager"/>-->
+<!--        </property>-->
+<!--        <property name="target">-->
+<!--            <bean class="org.bahmni.module.task.api.service.impl.TaskServiceImpl">-->
+<!--                <constructor-arg ref="fhirTaskDao"/>-->
+<!--            </bean>-->
+<!--        </property>-->
+<!--        <property name="preInterceptors">-->
+<!--            <ref bean="serviceInterceptors"/>-->
+<!--        </property>-->
+<!--        <property name="transactionAttributeSource">-->
+<!--            <ref bean="transactionAttributeSource"/>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean parent="serviceContext">-->
+<!--        <property name="moduleService">-->
+<!--            <list merge="true">-->
+<!--                <value>org.bahmni.module.task.api.service.TaskService</value>-->
+<!--                <ref bean="taskService"/>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+</beans>
