@@ -19,7 +19,7 @@
             http://www.springframework.org/schema/context
             http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-    <!-- FHIR2 Task layer (IomTaskDao/IomTaskService/translators) is annotation-registered. -->
+    <!-- FHIR2 Task layer (TaskDao/TaskService/translators) is annotation-registered. -->
     <context:component-scan base-package="org.bahmni.module.task.api" />
     <context:component-scan base-package="org.bahmni.module.task.fhir2" />
 

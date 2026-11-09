@@ -13,7 +13,7 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>OpenMRS Task module</name>
-	<description>Standalone module owning the Task domain, persistence, business DAO/service, and FHIR2 Task resource support extracted from openmrs-module-iom-extension.</description>
+	<description>Standalone module owning the Task domain, persistence, business DAO/service, and FHIR2 Task resource support</description>
 	<licenses>
 		<license>
 			<name>MPL v2 with Healthcare Disclaimer</name>
