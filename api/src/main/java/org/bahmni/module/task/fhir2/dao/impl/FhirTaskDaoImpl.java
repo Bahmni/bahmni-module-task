@@ -4,8 +4,7 @@
  * obtain one at http://mozilla.org/MPL/2.0/. OpenMRS is also distributed under
  * the terms of the Healthcare Disclaimer located at http://openmrs.org/license.
  *
- * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
- * graphic logo is a trademark of OpenMRS Inc.
+ * Copyright (C) Thoughtworks Inc.
  */
 package org.bahmni.module.task.fhir2.dao.impl;
 
@@ -25,7 +24,7 @@ import org.openmrs.module.fhir2.api.search.param.SearchParameterMap;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("taskExtFhirTaskDaoImpl")
 @Primary
 public class FhirTaskDaoImpl extends BaseFhirDao<Task> implements FhirTaskDao {
 	

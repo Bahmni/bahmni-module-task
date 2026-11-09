@@ -4,8 +4,7 @@
  * obtain one at http://mozilla.org/MPL/2.0/. OpenMRS is also distributed under
  * the terms of the Healthcare Disclaimer located at http://openmrs.org/license.
  *
- * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
- * graphic logo is a trademark of OpenMRS Inc.
+ * Copyright (C) Thoughtworks Inc.
  */
 package org.bahmni.module.task.api.dao.impl;
 
@@ -19,7 +18,6 @@ import org.openmrs.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 
 @Component("taskExtDao")
 public class TaskDaoImpl implements TaskDao {
@@ -28,15 +26,7 @@ public class TaskDaoImpl implements TaskDao {
 	
 	@Autowired
 	public TaskDaoImpl(SessionFactory sessionFactory) {
-		System.out.println("************** Constructing TaskDao ************** ");
 		this.sessionFactory = sessionFactory;
-		System.out.println("************** Constructing TaskDao ************** ");
-	}
-	
-	@PostConstruct
-	public void init() {
-		// Executes after dataSource is injected
-		System.out.println(" ************** TaskDao initialized ************** ");
 	}
 	
 	@Override
